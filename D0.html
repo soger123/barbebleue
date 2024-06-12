@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbe Bleue</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+        body {
+            font-family: 'MedievalSharp', cursive; /* 원하는 서체로 변경 */
+            background-color: black; /* 검은색 배경 설정 */
+            color: white; /* 흰글자 설정 */
+            text-align: center;
+            
+        }
+        p {
+            font-size: 18px; /* 원하는 글자 크기로 설정 */
+            line-height: 1.5; /* 문장단위로 나타나도록 설정 */
+        }
+        button {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255); 
+            margin-top: 80px;
+            border: 0px solid #ffffff;
+            padding: 10px 30px; /* 상, 우, 하, 좌 */
+            font-family: 'MedievalSharp', cursive; /* 원하는 서체로 변경 */
+            font-size: 20px;
+            margin-right: 80px;
+            margin-left: 80px;
+            font-weight: bold;
+        }
+       
+       
+    </style>
+</head>
+
+<body>
+    <div id="story">
+        <!-- Votre histoire de Barbe Bleue commence ici -->
+        <p>Il était une fois un homme qui avait de belles maisons à la ville et à la campagne, de la vaisselle d’or et
+            d’argent, des meubles en broderie et des carrosses tout dorés. Mais, par malheur, cet homme avait la barbe
+            bleue : cela le rendait si laid et si terrible, qu’il n’était ni femme ni fille qui be s’enfuît de devant
+            lui.
+            Une de ses voisines, dame de qualité, avait deux filles parfaitement belles. Il lui en demanda une en
+            mariage, et lui laissa le choix de celle qu’elle voudrait lui donner.
+            Elles n’en voulait point toutes deux, et se le renvoyaient l’une à l’autre, ne pouvant se résoudre à prendre
+            un homme qui eût la barbe bleue. Ce qui les dégoûtait encore, c’est qu’il avait déjà épousé plusieurs
+            femmes, et qu’on ne savait ce que ces femme était devenues.
+        </p>
+        <!-- Ajoutez d'autres phrases de l'histoire ici -->
+    </div>
+
+    <div id="buttons"  class="botton">
+    
+        <button id="yes-button"><a href="D1.html">SUITE</a></button>
+    
+    </div>
+
+    <script>
+        const storyText = [
+            "Il était une fois, dans un lointain château...",
+            // Ajoutez d'autres phrases de l'histoire ici
+        ];
+
+        const storyElement = document.getElementById("story");
+        const yesButton = document.getElementById("yes-button");
+        const noButton = document.getElementById("no-button");
+
+        let currentIndex = 0;
+
+        function displayNextSentence() {
+            if (currentIndex < storyText.length) {
+                storyElement.innerHTML = storyText[currentIndex];
+                currentIndex++;
+            } else {
+                // L'histoire est terminée, vous pouvez ajouter d'autres actions ici
+            }
+        }
+
+        yesButton.addEventListener("click", displayNextSentence);
+        noButton.addEventListener("click", displayNextSentence);
+    </script>
+</body>
+
+</html>

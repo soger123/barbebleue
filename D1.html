@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbe Bleue</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+        body {
+            font-family: 'MedievalSharp', cursive; /* 원하는 서체로 변경 */
+            background-color: black; /* 검은색 배경 설정 */
+            color: white; /* 흰글자 설정 */
+            text-align: center;
+            
+        }
+        p {
+            margin-top: 100px;
+            font-size: 18px; /* 원하는 글자 크기로 설정 */
+            line-height: 1.5; /* 문장단위로 나타나도록 설정 */
+        }
+        button {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255); 
+            margin-top: 80px;
+            border: 0px solid #ffffff;
+            padding: 10px 30px; /* 상, 우, 하, 좌 */
+            font-family: 'MedievalSharp', cursive; /* 원하는 서체로 변경 */
+            font-size: 20px;
+            margin-right: 80px;
+            margin-left: 80px;
+            font-weight: bold;
+        }
+       
+       
+    </style>
+</head>
+
+<body>
+    <div id="story">
+        <!-- Votre histoire de Barbe Bleue commence ici -->
+        <p>Souhaitez-vous que le protagoniste se marie ?
+        </p>
+        <!-- Ajoutez d'autres phrases de l'histoire ici -->
+    </div>
+
+    <div id="buttons"  class="botton">
+    
+        <button id="yes-button"><a href="D2.html">OUI</a></button>
+        <button id="no-button"><a href="F0.html">NON</a></button>
+
+    </div>
+
+    <script>
+        const storyText = [
+            "Il était une fois, dans un lointain château...",
+            // Ajoutez d'autres phrases de l'histoire ici
+        ];
+
+        const storyElement = document.getElementById("story");
+        const yesButton = document.getElementById("yes-button");
+        const noButton = document.getElementById("no-button");
+
+        let currentIndex = 0;
+
+        function displayNextSentence() {
+            if (currentIndex < storyText.length) {
+                storyElement.innerHTML = storyText[currentIndex];
+                currentIndex++;
+            } else {
+                // L'histoire est terminée, vous pouvez ajouter d'autres actions ici
+            }
+        }
+
+        yesButton.addEventListener("click", displayNextSentence);
+        noButton.addEventListener("click", displayNextSentence);
+    </script>
+</body>
+
+</html>
