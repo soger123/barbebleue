@@ -1,0 +1,84 @@
+/* Styles généraux */
+html {
+    padding: 0 1em;
+    font-family: Calibri, sans-serif;
+}
+
+.container {
+    max-width: 720px;
+}
+
+img {
+    max-width: 500px;
+    height: auto;
+}
+
+.image-left,
+.image-right {
+    margin: 1em 0;
+}
+
+/* Mise en page pour les écrans larges */
+@media (min-width: 50em) {
+
+    .image-left,
+    .image-right {
+        display: flex;
+        align-items: center;
+    }
+
+    .image-left img {
+        margin-right: 1em;
+        float: left;
+        /* Fallback pour les anciens navigateurs */
+    }
+
+    .image-right img {
+        order: 1;
+        margin-left: 1em;
+        float: right;
+        /* Fallback pour les anciens navigateurs */
+    }
+
+    /* Clearfix pour les anciens navigateurs */
+    .image-left::after,
+    .image-right::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+/* Réduire la taille des images sur les écrans plus larges */
+@media (min-width: 30em) {
+
+    .image-left img,
+    .image-right img {
+        flex-shrink: 0;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+body {
+    font-family: 'MedievalSharp', cursive; /* 원하는 서체로 변경 */
+    background-color: black; /* 검은색 배경 설정 */
+    color: white; /* 흰글자 설정 */
+    text-align: center;
+    
+}
+p {
+    font-size: 18px; /* 원하는 글자 크기로 설정 */
+    line-height: 1.5; /* 문장단위로 나타나도록 설정 */
+}
+button {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255); 
+    margin-top: 80px;
+    border: 0px solid #ffffff;
+    padding: 10px 30px; /* 상, 우, 하, 좌 */
+    font-family: 'MedievalSharp', cursive; /* 원하는 서체로 변경 */
+    font-size: 20px;
+    margin-right: 80px;
+    margin-left: 80px;
+    font-weight: bold;
+}
